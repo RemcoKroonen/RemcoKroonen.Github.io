@@ -1,11 +1,11 @@
 
 	body {
-    background-color: lightblue;
+    background-color: rgb(128,128,128)};
 }
 
 @media screen and (min-width: 480px) {
     body {
-        background-color: lightblue;
+        background-color: rgb(128,128,128)};
     }
 }
 	h1   {color: gainsboro;}
