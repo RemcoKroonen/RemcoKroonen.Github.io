@@ -1,40 +1,156 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Portfolio</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="template1.css">
-	<link rel="stylesheet" type="text/css" href="template2.css">
-	<link rel="stylesheet" type="text/css" href="template3.css">
-	<title>Mijn portefolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<div class="topnav" id="myTopnav">
-		<a href="opleiding.html">Opleiding</a>
-		<a href="overmij.html">Over mij</a>
-		<a href="wiebenik.html">Wie ben Ik</a>
-		<a href="beroep.html">Beroep</a>
-	</div>
-	
-	<img src="Boek.jpg" alt="Test Image" width="300" height="150">
-	<h1>Algemene gegevens</h1>
-	<p>Mijn naam is Remco Kroonen, Ik ben 16 jaar en woon in Zwijndrecht. Mijn email is r.kroonen@live.nl en mijn telefoonnummer is  0625576378. Mijn hobby's zijn: gitaar spelen(soms nog), gamen en lezen.</p>
+	<style>
+		body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+	</style>
+	<body class="w3-light-grey w3-content" style="max-width:1600px">
 
-	<h2>Doelen en wat ik graag doe</h2>
-	<p>Mijn doelen zijn om een goede programmeur te worden en misschien later apps/games te kunnen maken dit is begonnen toen ik een keer een game speelde en wilde toen weten wat er allemaal achter zit. Wat ik graag doe is iets met laptops en met computers(bijvoorbeeld onderdelen vervangen) en gitaar spelen. Ik zat vroeger op korfbal maar daar ben ik mee gestopt. Dingen die ik ook leuk vind zijn: lezen, meer te weten komen over de Tweede Wereldoorlog en over tanks. Mijn uiteindelijke doel/droom is om als game developer bij Blizzard te werken.</p>
+		<!-- Sidebar/menu -->
+		<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+			<div class="w3-container">
+				<a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+					<i class="fa fa-remove"></i>
+				</a>
+				<img src="image.jpg" style="width:45%;" class="w3-round"><br><br>
+				<h4><b>PORTFOLIO</b></h4>
+				<p class="w3-text-grey">Andere pagina's van mijn portfolio</p>
+			</div>
+			<div class="w3-bar-block">
+				<a href="opleiding.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Opleiding</a> 
+				<a href="overmij.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>Over Mij</a> 
+				<a href="opdrachten.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>Opdrachten.</a>
+				<a href="beroep.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>Beroep en toekomstbeeld.</a>
 
-	<h2>Kennis en vaardigheden</h2>
-	<p>Mijn kennis met programmeren is nog best weinig maar ik heb me wel verdiept in wat een applicatie ontwikkelaar moet weten bijvoorbeeld: Front-end en back-end developent, Python, Sass en zo verder. Ik vind het heel erg leuk om een nieuwe programmar taal te leren(ben ook bezig met het lezen van een boek over het progammeren van een game).  en mee te werken. Kan wel pc uit elkaar halen maar dat is niet echt belangrijk bij deze opleiding maar is wel handig. Ik snap en leer nieuwe dingen snel als het over computers en laptops gaat.</p>
-	<h2>Studies</h2>
-	<p>Diploma van Focus Beroepsacademie ict route Kader (2jaar), typediploma en bezig met studie applicatie ontwikkelaar op Da Vinci college in Dordrecht.</p>
+			</div>
+		</nav>
 
-	<h2>Werkervaring</h2>
-	<p>stage gelopen bij computerzaak Triple Point(2 weken) en VCS automatisering(1 maand). Links onder aan gaan naar de websites van die bedrijven. Bij triple point heb ik veel onderdelen van computers vervangen en bij VCS software laten updaten en installeren of onderdelen vervangen. Ik bezorg ook nog folders wekelijks.</p>
-	<a href="http://www.vcs.nl/">Website: VCS</a>
-	<a href="http://www.triplepoint.nl/website/">Website: Triple Point</a>
+		<!-- Overlay effect when opening sidebar on small screens -->
+		<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+		<!-- !PAGE CONTENT! -->
+		<div class="w3-main" style="margin-left:300px">
+
+			<!-- Header -->
+			<header id="portfolio">
+				<span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+				<div class="w3-container">
+					<h1><b>My Portfolio</b></h1>
+					<div class="w3-section w3-bottombar w3-padding-16">
+						<p>Hieronder ziet u een paar voorbeelden van de opdrachten die ik heb gedaan. U kunt meer opdrachten vinden op de opdrachten pagina</p>
+					</div>
+				</div>
+			</header>
+
+			<!-- First Photo Grid-->
+			<div class="w3-row-padding">
+				<div class="w3-third w3-container w3-margin-bottom">
+				
+					<div class="w3-container w3-white">
+						<p><b>Eerste Schoolopdracht: Wie ben ik.</b></p>
+						<p>De eerste schoolopdracht was het maken van een makkelijk CV/Portfolio/Wie ben ik html pagina met wat makkelijke css.</p>
+					</div>
+				</div>
+				<div class="w3-third w3-container w3-margin-bottom">
+					
+					<div class="w3-container w3-white">
+						<p><b>Tweede Schoolopdracht: Recepten</b></p>
+						<p>Het doel van deze opdracht was het maken van een html pagina voor een recept dat jezelf gekozen had.</p>
+					</div>
+				</div>
+				<div class="w3-third w3-container">
+				
+					<div class="w3-container w3-white">
+						<p><b>Derde Schoolopdracht: De vloot</b></p>
+						<p>Bij deze opdracht moesten we een pagina namaken op basis van voorbeelden. En afbeeldingen op de juiste plek tussen de tekst zetten.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Second Photo Grid-->
+			<div class="w3-row-padding">
+				<div class="w3-third w3-container w3-margin-bottom">
+				
+					<div class="w3-container w3-white">
+						<p><b>Vierde Schoolopdracht: Layout</b></p>
+						<p>Dit was de opdracht dat je nieuwsartikelen op je pagina moest zetten en een reclame met link moest maken.</p>
+					</div>
+				</div>
+				<div class="w3-third w3-container w3-margin-bottom">
+					
+					<div class="w3-container w3-white">
+						<p><b>Vijfde Schoolopdracht: Grid</b></p>
+						<p>Bij deze opdracht moest ik een voorbeeld tot op de pixel namaken. Ook moest ik gebruik maken van flex-box.</p>
+					</div>
+				</div>
+				<div class="w3-third w3-container">
+					
+					<div class="w3-container w3-white">
+						<p><b>Zesde Schoolopdracht : Handy</b></p>
+						<p>Bij deze opdracht moest ik werken met het veranderen van de static van afbeeldingen en leerde ik hoe ik ze moest laten bewegen als de muiscursor erover heen ging. Ook leerde ik om een uitklap menu te maken.</p>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Images of Me -->
+			<div class="w3-row-padding w3-padding-16" id="about">
+				<div class="w3-col m6">
+				</div>
+				<div class="w3-col m6">
+				</div>
+			</div>
+
+			<div class="w3-container w3-padding-large" style="margin-bottom:32px">
+				<p></p>
+				<hr>
+
+				<h4>Programmeer skills</h4>
+				<!-- Progress bars / Skills -->
+				<p>HTML</p>
+				<div class="w3-grey">
+					<div class="w3-container w3-dark-grey w3-padding w3-center" style="width:95%">95%</div>
+				</div>
+				<p>CSS</p>
+				<div class="w3-grey">
+					<div class="w3-container w3-dark-grey w3-padding w3-center" style="width:85%">85%</div>
+				</div>
+				<p>JavaScript</p>
+				<div class="w3-grey">
+					<div class="w3-container w3-dark-grey w3-padding w3-center" style="width:55%">55%</div>
+				</div>
+				<p>PHP</p>
+				<div class="w3-grey">
+					<div class="w3-container w3-dark-grey w3-padding w3-center" style="width:45%">45%</div>
+				</div>
+			</div>
+			<p>
+			</p>
+			<hr>
+
+			<
+		</div>
+
+		<script>
+// Script to open and close sidebar
+function w3_open() {
+	document.getElementById("mySidebar").style.display = "block";
+	document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+	document.getElementById("mySidebar").style.display = "none";
+	document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
 </body>
 </html>
-
-
-
-
